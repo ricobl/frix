@@ -1,0 +1,72 @@
+<html>
+<head>
+<title></title>
+
+<style type="text/css">
+span#hint_box {
+	position: absolute;
+	left: 200px;
+	margin-left: 10px;
+	background: #ff0;
+	border: 1px solid #000;
+}
+</style>
+
+<script type="text/javascript" src="j.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	var hint_box = $('<span id="hint_box" />').prependTo('body');
+	
+	var change = function () {
+		
+		var self = $(this);
+		
+		var chars_left = self.attr('maxlength') - self.val().length;
+		
+		hint_box.text(chars_left + ' chars left.');
+		
+	};
+	
+	$(':text').filter(function(){
+		
+		// IE gives 2147483647 when not specified, Firefox gives -1
+		var ml = $(this).attr('maxlength');
+		return (ml != -1) && (ml < 1000);
+		
+	}).bind('change keydown keyup click focus', change).focus(function(){
+		
+		var self = $(this);
+		
+		offset = self.offset();
+		offset.left += self.width();
+		
+		hint_box.css(offset);
+		hint_box.show();
+		
+	}).blur(function(){
+		hint_box.hide();
+	});
+	
+});
+</script>
+</head>
+<body>
+
+<form name="" action="" onsubmit="return false;">
+	
+	<p>
+		aaa
+		<input type="text" name="aaa" maxlength="20" />
+	</p>
+	
+	<p>
+		bbb
+		<input type="text" name="bbb" />
+	</p>
+	
+</form>
+
+
+</body>
+</html>

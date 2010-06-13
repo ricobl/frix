@@ -1,0 +1,226 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+	font-size: inherit;
+}
+address {
+    font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+}
+ol,ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+a {
+	text-decoration: none;
+}
+
+body {
+	background: yellow;
+	font-size: 14px;
+}
+
+a,
+input[type=submit] {
+	display: inline-block;
+	background: black;
+	color: white;
+	font-weight: bold;
+	padding: 5px 10px;
+	border: 0;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#header {
+	background: lime;
+	padding: 10px;
+	padding-bottom: 0;
+}
+	#header h1 {
+		float: left;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+
+	#toolbar {
+		float: right;
+	}
+
+	#menu {
+		clear: both;
+	}
+	#menu ul {
+	}
+		#menu ul li {
+			display: inline-block;
+		}
+			#menu ul li a {
+				display: inline-block;
+				border-radius: 5px 5px 0 0;
+				-moz-border-radius: 5px 5px 0 0;
+				-webkit-border-radius: 5px 5px 0 0;
+			}
+			#menu ul li.active a {
+				background: aqua;
+				color: black;
+			}
+
+#main {
+	background: aqua;
+	padding: 10px;
+}
+
+#info_bar {
+	margin-bottom: 10px;
+}
+
+#main p {
+	margin-bottom: 10px;
+}
+
+#data {
+	padding: 5px;
+	background: black;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+	#data table {
+		width: 100%;
+	}
+	#data table,
+	#data th,
+	#data td {
+	}
+	#data th,
+	#data td {
+		padding: 5px 10px;
+		text-align: center;
+	}
+	#data th {
+		background: black;
+		color: white;
+	}
+	#data td {
+		background: #f0f0f0;
+	}
+
+form {
+}
+	label span {
+		display: inline-block;
+		font-weight: bold;
+		text-align: right;
+		width: 15%;
+	}
+	.text_field,
+	.password_field {
+		display: inline-block;
+		width: 80%;
+		padding: 5px 10px;
+		border: 2px solid black;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+	form p.buttons {
+		margin-top: 10px;
+	}
+	fieldset.inline {
+		color: white;
+		margin-bottom: 10px;
+	}
+		fieldset.inline h3 {
+			margin-left: 20px;
+			display: inline-block;
+			padding: 10px;
+			background: black;
+			border-radius: 5px 5px 0 0;
+			-moz-border-radius: 5px 5px 0 0;
+			-webkit-border-radius: 5px 5px 0 0;
+		}
+		fieldset.inline table {
+			background: black;
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			width: 100%;
+		}
+		fieldset.inline th,
+		fieldset.inline td {
+			padding: 5px 10px;
+			text-align: center;
+		}
+		fieldset.inline th {
+			color: white;
+		}
+		fieldset.inline .text_field,
+		fieldset.inline .password_field {
+			display: inline-block;
+			width: 100%;
+			padding: 5px 10px;
+			border: 2px solid black;
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+		}
+		
+body#splash {
+}
+	body#splash #container {
+		text-align: center;
+		padding-top: 20px;
+	}
+
+#splash_box {
+	margin: 0 auto;
+	width: 300px;
+	height: 220px;
+	padding: 10px;
+
+	border: 10px solid black;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background: lime;
+}
+	#splash_box h1 {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	#splash_box form {
+		margin-bottom: 20px;
+	}
+		#splash_box label span {
+			display: inline-block;
+			width: 80px;
+		}
+		#splash_box .text_field,
+		#splash_box .password_field {
+			width: 150px;
+		}
+		#splash_box form p.buttons {
+			margin-top: 20px;
+		}
+
+#message {
+	margin-bottom: 10px;
+}
+	#message a {
+		background: orange;
+		color: black;
+	}
+	#message a:after {
+		content: " [X]";
+	}

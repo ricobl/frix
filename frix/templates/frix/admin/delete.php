@@ -1,7 +1,9 @@
 <? extend('frix/admin/base') ?>
 
 <? block('contents') ?>
-	<p>WARNING: This will remove all items related to this object.</p>
+	<div id="message">
+		<p>WARNING: This will remove all items related to this object.</p>
+	</div>
 
 	<form action="./" method="post">
 		<p class="buttons">

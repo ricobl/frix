@@ -1,7 +1,9 @@
 <? extend('frix/admin/base') ?>
 
 <? block('contents') ?>
-	<p>Are you sure you want to delete <strong>"<?= $file_name ?>"</strong>?</p>
+	<div id="message">
+		<p>Are you sure you want to delete <strong>"<?= $file_name ?>"</strong>?</p>
+	</div>
 
 	<form action="./?<?= $_SERVER['QUERY_STRING'] ?>" method="post">
 		<p class="buttons">

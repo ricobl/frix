@@ -303,6 +303,18 @@ class AdminOptions extends BaseAdminOptions {
 			reset($context['items'])->is_first = true;
 		}
 		
+		if ($_GET['msg'] == 'added') {
+			$context['msg'] = sprintf('%s added successfully.', $this->meta->verbose_name);
+			$context['msg_type'] = 'ok';
+		}
+		elseif ($_GET['msg'] == 'changed') {
+			$context['msg'] = sprintf('%s changed successfully.', $this->meta->verbose_name);
+			$context['msg_type'] = 'ok';
+		}
+		elseif ($_GET['msg'] == 'deleted') {
+			$context['msg'] = sprintf('%s deleted successfully.', $this->meta->verbose_name);
+			$context['msg_type'] = 'ok';
+		}
 		
 	}
 	

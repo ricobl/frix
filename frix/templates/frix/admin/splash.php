@@ -7,14 +7,24 @@
 </head>
 
 <body id="splash">
+	<div id="container">
+		
+		<div id="header">
+			<h1><a href="<?= url($root) ?>"><?= Frix::config('PROJECT_TITLE') ?></a></h1>
+		</div>
 
-<div id="container">
-	
-	<div id="splash_box">
-		<? block('contents') ?><? end_block() ?>
+		<? if ($msg): ?>
+			<div id="message"<? if ($msg_type): ?> class="<?= $msg_type ?>"<? endif; ?>>
+				<a href="./"><?= $msg ?></a>
+			</div>
+		<? endif; ?>
+
+		<div id="main">
+			<div id="splash_box">
+				<? block('contents') ?><? end_block() ?>
+			</div>
+		</div>
+		
 	</div>
-	
-</div>
-
 </body>
 </html>

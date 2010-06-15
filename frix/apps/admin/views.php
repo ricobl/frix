@@ -125,7 +125,8 @@ class Views {
 				redir($_SERVER['REQUEST_URI']);
 			}
 			else {
-				self::$context['message'] = 'Wrong username or password.';
+				self::$context['msg'] = 'Wrong username or password.';
+				self::$context['msg_type'] = 'err';
 			}
 			
 		}
@@ -180,7 +181,8 @@ class Views {
 			
 			// Check for a valid e-mail address.
 			if (!validate_email($email)) {
-				self::$context['message'] = sprintf('Invalid e-mail address "%s"!', $email);
+				self::$context['msg'] = sprintf('Invalid e-mail address "%s"!', $email);
+				self::$context['msg_type'] = 'err';
 			}
 			else {
 				// Get user by e-mail address
@@ -201,38 +203,41 @@ class Views {
 					// Send the password to the user
 					$ok = send_mail('New password', $msg, Frix::app('settings')->get('contact_email'), $user->email);
 					
-					// Error sending the message?
+					// Error sending the msg?
 					if (!$ok) {
-						self::$context['message'] =
-							'Couldn\'t send message.<br />' .
+						self::$context['msg'] =
+							'Couldn\'t send msg.<br />' .
 							'Password not changed.'
 						;
+						self::$context['msg_type'] = 'err';
 					}
 					// Message sucessfully sent?
 					else {
 						// Change user password and save
 						$user->set_password($pass);
 						$user->save();
-						// Redirect with a success message
+						// Redirect with a success msg
 						redir('./?sent=1');
 					}
 					
 				}
 				else {
-					self::$context['message'] = sprintf('E-mail address "%s" not found!', $email);
+					self::$context['msg'] = sprintf('E-mail address "%s" not found!', $email);
+					self::$context['msg_type'] = 'err';
 				}
 			}
 			
 		}
 		else {
 			if ($_GET['sent']) {
-				self::$context['message'] =
+				self::$context['msg'] =
 					'The new password was sent!<br />'.
 					'Please check your inbox.'
 				;
+				self::$context['msg_type'] = 'ok';
 			}
 			else {
-				self::$context['message'] = 'Type your e-mail to get a new password.';
+				self::$context['msg'] = 'Type your e-mail to get a new password.';
 			}
 		}
 		
@@ -336,6 +341,7 @@ class Views {
 			);
 			
 			self::$context['msg'] = $msg[$_GET['msg']];
+			self::$context['msg_type'] = 'ok';
 		}
 		
 		// Load a list of files not starting with a dot

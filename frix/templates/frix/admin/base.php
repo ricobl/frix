@@ -13,10 +13,10 @@
 	<? if (!$popup): ?>
 		<? block('header') ?>
 			<div id="header">
-				<h1><a href="<?= url($root) ?>">CMS</a></h1>
+				<h1><a href="<?= url($root) ?>"><?= Frix::config('PROJECT_TITLE') ?></a></h1>
 				
 				<ul id="toolbar">
-					<li class="bt_help"><a href="<?= Frix::config('ADMIN_HELP_LINK') ?>">Help</a></li>
+					<li class="bt_logout"><a href="<?= url($root, 'logout') ?>">Logout</a></li>
 				</ul>
 				
 				<div id="menu">
@@ -27,7 +27,6 @@
 							<? endif; ?>
 						<? endforeach; ?>
 						<li<?= $filebrowser ? ' class="active"' : '' ?>><a href="<?= url($root, 'browser') ?>">Filebrowser</a></li>
-						<li class="logout"><a href="<?= url($root, 'logout') ?>">Logout</a></li>
 					</ul>
 				</div>
 			</div>

@@ -105,8 +105,8 @@ $config['APPS'] = array(
 //////////
 
 // Project Name
-$config['PROJECT_TITLE'] = 'Frix';
+$config['PROJECT_TITLE'] = 'Frix::php';
 
 // Help / support link on admin
-$config['ADMIN_HELP_LINK'] = 'mailto:rico.bl@gmail.com';
+$config['ADMIN_HELP_LINK'] = 'http://github.com/ricobl/frixphp';
 ?>

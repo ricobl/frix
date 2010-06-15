@@ -25,14 +25,14 @@ a {
 }
 
 body {
-	background: yellow;
+	background: white;
 	font-size: 14px;
+	color: #333;
 }
 
 a,
 input[type=submit] {
 	display: inline-block;
-	background: black;
 	color: white;
 	font-weight: bold;
 	padding: 5px 10px;
@@ -40,18 +40,30 @@ input[type=submit] {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+	background: #024769;
 }
 
 #header {
-	background: lime;
 	padding: 10px;
 	padding-bottom: 0;
+	overflow: hidden;
+
+	background: #6eb6d5;
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6eb6d5', endColorstr='#46a3ca'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#6eb6d5), to(#46a3ca)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #6eb6d5,  #46a3ca); /* for firefox 3.6+ */
+
+	margin-bottom: 10px;
 }
 	#header h1 {
 		float: left;
 		font-size: 20px;
 		margin-bottom: 10px;
 	}
+		#header h1 a {
+			background: #024769;
+		}
 
 	#toolbar {
 		float: right;
@@ -67,17 +79,17 @@ input[type=submit] {
 		}
 			#menu ul li a {
 				display: inline-block;
+				background: #1482b4;
 				border-radius: 5px 5px 0 0;
 				-moz-border-radius: 5px 5px 0 0;
 				-webkit-border-radius: 5px 5px 0 0;
 			}
 			#menu ul li.active a {
-				background: aqua;
-				color: black;
+				background: white;
+				color: #333;
 			}
 
 #main {
-	background: aqua;
 	padding: 10px;
 }
 
@@ -91,7 +103,7 @@ input[type=submit] {
 
 #data {
 	padding: 5px;
-	background: black;
+	background: #1482B4;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -109,91 +121,82 @@ input[type=submit] {
 		text-align: center;
 	}
 	#data th {
-		background: black;
+		background: #1482B4;
 		color: white;
 	}
 	#data td {
-		background: #f0f0f0;
+		background: #E7F3FD;
+		border-bottom: 1px solid #1482B4;
+	}
+	#data tr:nth-child(odd) td {
+		background: white;
 	}
 
 form {
 }
+	form p {
+		margin-bottom: 10px;
+	}
 	label span {
 		display: inline-block;
 		font-weight: bold;
 		text-align: right;
 		width: 15%;
 	}
+	select,
+	textarea,
 	.text_field,
 	.password_field {
 		display: inline-block;
 		width: 80%;
 		padding: 5px 10px;
-		border: 2px solid black;
+		border: 2px solid #1482B4;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background: #e7f3fd;
+	}
+	p.buttons {
+		margin-top: 10px;
+	}
+		span.button input,
+		p.buttons input {
+			cursor: pointer;
+		}
+	fieldset.inline {
+		margin-bottom: 10px;
+		border: 3px solid #1482B4;
 		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 	}
-	form p.buttons {
-		margin-top: 10px;
-	}
-	fieldset.inline {
-		color: white;
-		margin-bottom: 10px;
-	}
 		fieldset.inline h3 {
-			margin-left: 20px;
-			display: inline-block;
-			padding: 10px;
-			background: black;
-			border-radius: 5px 5px 0 0;
-			-moz-border-radius: 5px 5px 0 0;
-			-webkit-border-radius: 5px 5px 0 0;
+			padding: 5px 10px;
+			color: white;
+			background: #1482B4;
 		}
 		fieldset.inline table {
-			background: black;
-			border-radius: 5px;
-			-moz-border-radius: 5px;
-			-webkit-border-radius: 5px;
 			width: 100%;
 		}
 		fieldset.inline th,
 		fieldset.inline td {
 			padding: 5px 10px;
 			text-align: center;
+			border-bottom: 1px solid #e7f3fd;
 		}
 		fieldset.inline th {
-			color: white;
-		}
-		fieldset.inline .text_field,
-		fieldset.inline .password_field {
-			display: inline-block;
-			width: 100%;
-			padding: 5px 10px;
-			border: 2px solid black;
-			border-radius: 5px;
-			-moz-border-radius: 5px;
-			-webkit-border-radius: 5px;
+			background: #e7f3fd;
 		}
 		
 body#splash {
 }
 	body#splash #container {
 		text-align: center;
-		padding-top: 20px;
 	}
 
 #splash_box {
 	margin: 0 auto;
 	width: 300px;
-	height: 220px;
-	padding: 10px;
-
-	border: 10px solid black;
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	background: lime;
 }
 	#splash_box h1 {
 		font-size: 20px;
@@ -201,6 +204,16 @@ body#splash {
 	}
 	#splash_box form {
 		margin-bottom: 20px;
+		padding: 10px;
+
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+
+		background: #6eb6d5;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6eb6d5', endColorstr='#46a3ca'); /* for IE */
+		background: -webkit-gradient(linear, left top, left bottom, from(#6eb6d5), to(#46a3ca)); /* for webkit browsers */
+		background: -moz-linear-gradient(top,  #6eb6d5,  #46a3ca); /* for firefox 3.6+ */
 	}
 		#splash_box label span {
 			display: inline-block;
@@ -215,12 +228,34 @@ body#splash {
 		}
 
 #message {
-	margin-bottom: 10px;
+	overflow: hidden;
+	margin: 10px;
+	margin-top: 0;
 }
-	#message a {
-		background: orange;
-		color: black;
+	#message a,
+	#message p {
+		display: block;
+		border: 2px solid #fc0;
+		background: #FEFF8F;
+		color: #333;
+		padding: 5px 10px;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		font-weight: bold;
 	}
-	#message a:after {
-		content: " [X]";
+		#message a strong,
+		#message p strong {
+			color: #000;
+		}
+	#message.ok a,
+	#message.ok p {
+		border: 2px solid #21AF20;
+		background: #80FF7F;
 	}
+	#message.err a,
+	#message.err p {
+		background: #c00;
+		color: white;
+	}
+

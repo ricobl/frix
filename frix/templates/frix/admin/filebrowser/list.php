@@ -78,6 +78,8 @@
 			</table>
 		</div>
 	<? else: ?>
-		<p>No items found.</p>
+		<div id="message">
+			<p>No items found.</p>
+		</div>
 	<? endif; ?>
 <? end_block() ?>

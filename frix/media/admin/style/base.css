@@ -80,9 +80,16 @@ input[type=submit] {
 			#menu ul li a {
 				display: inline-block;
 				background: #1482b4;
-				border-radius: 5px 5px 0 0;
-				-moz-border-radius: 5px 5px 0 0;
-				-webkit-border-radius: 5px 5px 0 0;
+
+				border-radius: 0;
+				-moz-border-radius: 0;
+				-webkit-border-radius: 0;
+				border-radius-top-left: 5px;
+				-moz-border-radius-topleft: 5px;
+				-webkit-border-top-left-radius: 5px;
+				border-radius-top-right: 5px;
+				-moz-border-radius-topright: 5px;
+				-webkit-border-top-right-radius: 5px;
 			}
 			#menu ul li.active a {
 				background: white;
@@ -255,7 +262,15 @@ body#splash {
 	}
 	#message.err a,
 	#message.err p {
-		background: #c00;
-		color: white;
+		border: 2px solid #c00;
+		background: #FFAFAF;
 	}
 
+#quick_forms {
+	overflow: hidden;
+}
+	#quick_forms form {
+		float: left;
+		overflow: hidden;
+		margin-right: 10px;
+	}

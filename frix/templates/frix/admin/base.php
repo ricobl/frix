@@ -43,7 +43,6 @@
 		
 		<div id="info_bar">
 			<h2><?= $breadcrumbs ? implode(' | ', $breadcrumbs) : 'Start Page' ?></h2>
-			<? block('license') ?><? end_block() ?>
 		</div>
 		
 		<? block('contents') ?><? end_block() ?>

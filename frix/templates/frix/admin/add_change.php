@@ -3,10 +3,6 @@
 <? block('scripts') ?>
 <script type="text/javascript" src="<?= url(Frix::config('FRIX_MEDIA'), 'gz.php?file=admin/js/j.js') ?>"></script>
 <script type="text/javascript" src="<?= url(Frix::config('FRIX_MEDIA'), 'gz.php?file=admin/js/add_change.js') ?>"></script>
-
-<script type="text/javascript" src="<?= url(Frix::config('FRIX_MEDIA'), 'admin/js/tiny_mce/tiny_mce_gzip.js') ?>"></script>
-<script type="text/javascript" src="<?= url(Frix::config('FRIX_MEDIA'), 'admin/js/tiny_mce/tiny_mce_gzip_init.js') ?>"></script>
-<script type="text/javascript" src="<?= url(Frix::config('FRIX_MEDIA'), 'gz.php?file=admin/js/tiny_mce/tiny_mce_setup.js') ?>"></script>
 <? end_block() ?>
 
 <? $this->block('contents') ?>

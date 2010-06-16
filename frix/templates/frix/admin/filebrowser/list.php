@@ -4,8 +4,6 @@
 	<? block('body_attr') ?> id="filebrowser" class="popup"<? end_block() ?>
 	<? block('scripts') ?>
 	<script type="text/javascript" src="<?= url(Frix::config('FRIX_MEDIA'), 'gz.php?file=admin/js/j.js') ?>"></script>
-	<script type="text/javascript" src="<?= url(Frix::config('FRIX_MEDIA'), 'admin/js/tiny_mce/tiny_mce_popup.js') ?>"></script>
-	<script type="text/javascript" src="<?= url(Frix::config('FRIX_MEDIA'), 'admin/js/tiny_mce/tiny_mce_popup_setup.js') ?>"></script>
 	<? end_block() ?>
 <? else: ?>
 	<? block('body_attr') ?> id="filebrowser"<? end_block() ?>

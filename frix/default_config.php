@@ -4,7 +4,7 @@
 //////////////
 
 // Database table prefix
-$config['DB_PREFIX'] = 'frix_';
+$config['DB_PREFIX'] = '';
 // Database connection
 $config['DB_URL'] = 'mysql://root:123@localhost/frix';
 

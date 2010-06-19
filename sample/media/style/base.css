@@ -1,0 +1,218 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+	font-size: inherit;
+}
+address {
+    font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+}
+ol,ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+a {
+	text-decoration: none;
+}
+
+body {
+	background: white;
+	font-size: 14px;
+	color: #333;
+}
+
+a,
+input[type=submit] {
+	display: inline-block;
+	color: white;
+	font-weight: bold;
+	padding: 5px 10px;
+	border: 0;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #024769;
+}
+
+#header {
+	padding: 10px;
+	padding-bottom: 0;
+	overflow: hidden;
+
+	background: #6eb6d5;
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6eb6d5', endColorstr='#46a3ca'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#6eb6d5), to(#46a3ca)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #6eb6d5,  #46a3ca); /* for firefox 3.6+ */
+
+	margin-bottom: 10px;
+}
+	#header h1 {
+		float: left;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+		#header h1 a {
+			background: #024769;
+		}
+
+	#menu {
+		clear: both;
+	}
+	#menu ul {
+	}
+		#menu ul li {
+			display: inline-block;
+		}
+			#menu ul li a {
+				display: inline-block;
+				background: #1482b4;
+
+				border-radius: 0;
+				-moz-border-radius: 0;
+				-webkit-border-radius: 0;
+				border-radius-top-left: 5px;
+				-moz-border-radius-topleft: 5px;
+				-webkit-border-top-left-radius: 5px;
+				border-radius-top-right: 5px;
+				-moz-border-radius-topright: 5px;
+				-webkit-border-top-right-radius: 5px;
+			}
+			#menu ul li.active a {
+				background: white;
+				color: #333;
+			}
+
+#main {
+	padding: 10px;
+}
+	#main h2 {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	#main p {
+		margin-bottom: 10px;
+	}
+
+#contents {
+	float: left;
+	width: 70%;
+}
+
+#sidebar {
+	float: right;
+	width: 25%;
+}
+	#sidebar .box {
+		overflow: hidden;
+		margin-bottom: 10px;
+		padding: 10px;
+		background: #6eb6d5;
+
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6eb6d5', endColorstr='#46a3ca'); /* for IE */
+		background: -webkit-gradient(linear, left top, left bottom, from(#6eb6d5), to(#46a3ca)); /* for webkit browsers */
+		background: -moz-linear-gradient(top,  #6eb6d5,  #46a3ca); /* for firefox 3.6+ */
+
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+	#sidebar ul {
+		list-style: disc inside;
+		color: white;
+	}
+		#sidebar ul li {
+			margin-bottom: 10px;
+		}
+	#sidebar h3 {
+		margin-bottom: 10px;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background: #024769;
+		color: white;
+		padding: 5px;
+	}
+	#sidebar a {
+		background: #1482b4;
+	}
+
+#text_box {
+}
+	#text_box p {
+		margin-bottom: 10px;
+	}
+
+form {
+}
+	form p {
+		margin-bottom: 10px;
+	}
+	label span {
+		display: inline-block;
+		font-weight: bold;
+		text-align: right;
+		width: 15%;
+	}
+	select,
+	textarea,
+	.text_field,
+	.password_field {
+		display: inline-block;
+		width: 300px;
+		padding: 5px 10px;
+		border: 2px solid #1482B4;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background: #e7f3fd;
+	}
+	p.buttons {
+		margin-top: 10px;
+	}
+		span.button input,
+		p.buttons input {
+			cursor: pointer;
+		}
+		
+#message {
+	overflow: hidden;
+	margin: 10px;
+	margin-top: 0;
+}
+	#message a,
+	#message p {
+		display: block;
+		border: 2px solid #fc0;
+		background: #FEFF8F;
+		color: #333;
+		padding: 5px 10px;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		font-weight: bold;
+	}
+		#message a strong,
+		#message p strong {
+			color: #000;
+		}
+	#message.ok a,
+	#message.ok p {
+		border: 2px solid #21AF20;
+		background: #80FF7F;
+	}
+	#message.err a,
+	#message.err p {
+		border: 2px solid #c00;
+		background: #FFAFAF;
+	}
+

@@ -11,7 +11,6 @@ Frix::model('cms', 'CmsMenuItem');
 class CmsPageOptions extends AdminOptions {
 	
 	public $inlines = array('CmsFile', 'CmsImage', 'CmsVideo');
-	// public $list_display = array('id', 'parent', 'title', 'slug', 'visible');
 	public $list_display = array('title', 'slug', 'visible');
 	
 	public $custom_position = 'pos';

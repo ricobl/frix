@@ -4,7 +4,6 @@ load('Form');
 // Load models
 Frix::model('cms', 'CmsPage');
 
-// TODO: The view could extend from a default view object
 class Views {
 	
 	function video ($path, $id) {
@@ -34,15 +33,12 @@ class Views {
 		
 		$pages = explode('/', $path);
 		
-		// Ignorable root pages (its children can be accessed directly)
-		$ignore_root_pages = array('vertical-nav', 'top-nav');
-		
 		// Stop if path is empty or starts with one of the grouping pages
 		if (!$path || in_array($pages[0], $ignore_root_pages)) {
 			throw new Http404Exception;
 		}
 		
-		// Get the last item and remove form the array
+		// Get the last item and remove from the array
 		$slug = array_pop($pages);
 		
 		// Get the page
@@ -140,7 +136,7 @@ class Views {
 			else {
 				
 				// Get e-mail address from the Settings app
-				$to = Frix::app('settings')->get('contact_email', 'rico.bl@gmail.com');
+				$to = Frix::app('settings')->get('contact_email');
 				
 				// Send the e-mail
 				$ok = send_mail('Contact', $f->get_message(), $f->get_email(), $to);

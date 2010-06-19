@@ -34,7 +34,7 @@ class Views {
 		$pages = explode('/', $path);
 		
 		// Stop if path is empty or starts with one of the grouping pages
-		if (!$path || in_array($pages[0], $ignore_root_pages)) {
+		if (!$path) {
 			throw new Http404Exception;
 		}
 		
@@ -64,15 +64,8 @@ class Views {
 			if ($parent_page) {
 				// Slug doesn't match?
 				if ($parent_page->slug != $slug) {
-					// Got one of the ignorable root pages?
-					if (in_array($parent_page->slug, $ignore_root_pages)) {
-						// Exit the loop
-						break;
-					}
-					else {
-						// Throw not found error
-						throw new Http404Exception;
-					}
+					// Throw not found error
+					throw new Http404Exception;
 				}
 			}
 			

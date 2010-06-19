@@ -273,6 +273,20 @@ class AdminOptions extends BaseAdminOptions {
 			$this->meta->ordering = array($this->custom_position, 'ASC');
 		}
 		
+		// Deal with messages
+		if ($_GET['msg'] == 'added') {
+			$context['msg'] = sprintf('%s added successfully.', $this->meta->verbose_name);
+			$context['msg_type'] = 'ok';
+		}
+		elseif ($_GET['msg'] == 'changed') {
+			$context['msg'] = sprintf('%s changed successfully.', $this->meta->verbose_name);
+			$context['msg_type'] = 'ok';
+		}
+		elseif ($_GET['msg'] == 'deleted') {
+			$context['msg'] = sprintf('%s deleted successfully.', $this->meta->verbose_name);
+			$context['msg_type'] = 'ok';
+		}
+
 		// Get the TreeField for this model (or null if not found)
 		$tree_field = $this->get_tree_field();
 		
@@ -303,18 +317,6 @@ class AdminOptions extends BaseAdminOptions {
 			reset($context['items'])->is_first = true;
 		}
 		
-		if ($_GET['msg'] == 'added') {
-			$context['msg'] = sprintf('%s added successfully.', $this->meta->verbose_name);
-			$context['msg_type'] = 'ok';
-		}
-		elseif ($_GET['msg'] == 'changed') {
-			$context['msg'] = sprintf('%s changed successfully.', $this->meta->verbose_name);
-			$context['msg_type'] = 'ok';
-		}
-		elseif ($_GET['msg'] == 'deleted') {
-			$context['msg'] = sprintf('%s deleted successfully.', $this->meta->verbose_name);
-			$context['msg_type'] = 'ok';
-		}
 		
 	}
 	
